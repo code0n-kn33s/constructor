@@ -1,0 +1,136 @@
+/*
+* @subsection   RD Parallax
+*
+* @description  Describes style declarations for RD Parallax extension
+*
+* @author       Evgeniy Gusarov
+* @link         https://ua.linkedin.com/pub/evgeniy-gusarov/8a/a40/54a
+* @version      3.6.4
+*/
+.rd-parallax-inner {
+    position: relative;
+    overflow: hidden;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+    clip: rect(0, auto, auto, 0);
+    pointer-events: none;
+}
+
+.rd-parallax-layer[data-type="media"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+}
+
+.rd-parallax-layer[data-type="media"] iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.rd-parallax-layer-holder {
+    pointer-events: all;
+}
+
+.rd-parallax-layer[data-url] {
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+}
+
+.rd-parallax-swiper {
+    z-index: 1 !important;
+}
+
+/*
+* Material Parallax
+*/
+.parallax-content {
+    position: relative;
+    z-index: 1;
+}
+
+.parallax-container {
+    position: relative;
+    overflow: hidden;
+    background-position: center center;
+    background-size: cover;
+}
+
+.material-parallax {
+    position: absolute;
+    top: 0;
+    left: -1px;
+    right: -1px;
+    bottom: 0;
+    z-index: 0;
+    background-position: center center;
+}
+
+.ipad .parallax-container,
+.iphone .parallax-container {
+    background-attachment: scroll !important;
+}
+
+.material-parallax img {
+    display: none;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    min-width: 101%;
+    min-height: 101%;
+    max-width: none;
+    transform: translate3d(-50%, 0, 0);
+}
+
+.bg-overlay-darker {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.bg-overlay-darker-02 {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+//secondary styles
+.parallax-content {
+    position: relative;
+    z-index: 1;
+}
+
+.section-34 {
+    padding-top: 34px;
+    padding-bottom: 34px;
+}
+
+.section-md-60 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.section-lg-top-130 {
+    padding-top: 130px;
+}
+
+.section-lg-bottom-155 {
+    padding-bottom: 155px;
+}
+
+.parallax-content h1 {
+    color: white;
+}
+
+@media (min-width: 992px) and (max-height: 576px) {
+    .section-height-800 [class*="section-"] {
+        padding-top: 90px;
+        padding-bottom: 115px;
+    }
+}
+
+@media (max-height: 360px) {
+    .section-height-320 {
+        min-height: 0 !important;
+        padding-top: 10px;
+    }
+}

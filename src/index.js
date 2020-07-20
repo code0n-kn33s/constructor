@@ -1,4 +1,10 @@
-import script from "./scripts/helpers.js";
-import common from "./scripts/common.js";
-import style from "./styles/main.sass";
+import './img/main_bg.jpg'
+
+import 'bootstrap';
+import "./styles/main.sass";
+
+import "./scripts/helpers.js";
 import "./scripts/select.js";
+
+import "./scripts/parallax.js";
+import "./scripts/common.js";
