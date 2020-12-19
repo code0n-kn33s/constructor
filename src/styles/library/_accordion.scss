@@ -1,0 +1,157 @@
+.card-title a,
+.card-body {
+    background: #fff;
+}
+
+.card-title a {
+    position: relative;
+    z-index: 1;
+    padding: 21px 82px 21px 32px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0;
+    color: #3c3c3e;
+    transition: 1.3s all ease;
+    border-radius: 6px 6px 0 0;
+    border-bottom: 1px solid #dedede;
+}
+
+.card-title a .card-arrow:after {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.card-title a.collapsed {
+    border-radius: 6px;
+    border-bottom-width: 0;
+}
+
+.card-title a.collapsed .card-arrow {
+    border-radius: 0 6px 6px 0;
+}
+
+.card-title a.collapsed .card-arrow:after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.card-arrow {
+    position: absolute;
+    top: 0;
+    bottom: -1px;
+    right: -1px;
+    z-index: 2;
+    width: 70px;
+    background: #e72d2b;
+    border-radius: 0 6px 0 0;
+    transition: 0.33s all ease;
+}
+
+.card-arrow::before,
+.card-arrow::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    z-index: 4;
+    transform: translateY(-50%);
+    background: #fff;
+}
+
+.card-arrow::before {
+    width: 14px;
+    height: 2px;
+    right: 28px;
+}
+
+.card-arrow::after {
+    width: 2px;
+    height: 14px;
+    right: 34px;
+}
+
+.collapse {
+    position: relative;
+    z-index: 1;
+    color: #7d7d7d;
+    border-radius: 0 0 6px 6px;
+}
+
+.card-body {
+    padding: 25px 44px 25px 32px;
+}
+
+@media (max-width: 991.98px) {
+    .card-title a,
+    .card-body {
+        padding-left: 25px;
+    }
+}
+
+@media (min-width: 768px) {
+    .card-title a {
+        font-size: 18px;
+    }
+}
+// --------------------
+// .collapse-item {
+//     overflow: hidden;
+//     max-height: 0;
+//     transition: 0.6s;
+// }
+
+.collapse-item.active {
+    max-height: 1000px;
+}
+
+.collapse-item .card-body {
+    padding: 20px 250px 20px 20px !important;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.collapse-item .card-body li {
+    font-size: 18px;
+}
+
+.collapse-item .card-body p {
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.collapse-item .card-body p:last-child {
+    margin-bottom: 0;
+}
+// --------/2
+
+.card-custom {
+    display: block;
+    margin: 0;
+    background: inherit;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    text-align: left;
+}
+
+.card-custom a {
+    display: block;
+}
+
+.card-custom .card-header {
+    padding: 0;
+    border-bottom: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.card-custom .card-body {
+    padding: 0;
+    border: 0;
+}
+
+.card-custom .card-title {
+    margin-bottom: 0;
+}
+

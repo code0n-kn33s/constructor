@@ -1,0 +1,29 @@
+-
+    var greatingObj = [
+        {
+            title: 'COVID-19',
+            link: './img/svg/bacila.svg',
+            text: 'При стаціонарному лікуванні більше 1 дня'
+        },
+        {
+            title: 'Нещасний випадок',
+            link: './img/svg/salut.svg',
+            text: 'У разі травм, шкоди здоров`ю чи тяжких наслідків'
+        },
+        {
+            title: 'Онко чи серцево- судинна хвороба',
+            link: './img/svg/heart.svg',
+            text: 'При стаціонарному лікуванні більше 5 днів чи тяжких наслідках'
+        },
+    ]
+
+.steam
+    .container
+        .steam-title.tl Заплатимо гроші, якщо вас спіткає:
+        .steam-list
+            each value in greatingObj
+                .steam-item
+                    .steam-item-img
+                        img(src=value.link, alt="")
+                    .steam-item-title.tls= value.title
+                    .steam-item-text.tx= value.text

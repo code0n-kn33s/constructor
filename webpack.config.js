@@ -49,7 +49,7 @@ module.exports = {
         ]
       },
       {
-        test: /svgIcons\.svg$/,
+        test: /svg\.svg$/,
         exclude: /node_modules/,
         use: SvgSpriteHtmlWebpackPlugin.getLoader(),
       },
@@ -89,7 +89,7 @@ module.exports = {
     }),
     new SvgSpriteHtmlWebpackPlugin({
       includeFiles: [
-        'src/img/svgIcons/*.svg',
+        'src/img/svg/*.svg',
       ],
     }),
     new MiniCssExtractPlugin({

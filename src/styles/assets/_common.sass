@@ -16,12 +16,14 @@ body
 .container
   width: $container-width
   margin: auto
-  @include laptop
+  @include desktop
     width: 980px
-  @include tablet
+  @include laptop
     width: 768px
-  @include mobile
+  @include tablet
     width: 480px
+  @include mobile
+    width: 320px
 .icon
   display: inline-block
   user-select: none

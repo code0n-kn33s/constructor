@@ -5,7 +5,6 @@ import { scrollToTop } from './helpers'
 
     // $(".parallax-container").parallax();
 
-    // heavy pages fix
     $(window).on("load", function () {
         setTimeout(function () {
             $(window).scroll();
@@ -23,6 +22,4 @@ import { scrollToTop } from './helpers'
             "background-size": "cover";
         `
     }
-
-
 })()

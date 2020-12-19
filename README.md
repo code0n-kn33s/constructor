@@ -11,3 +11,17 @@ clone and run:
     - [plugin.js](src/scripts/plugin.js)
   - __styles__
     - [main.sass](src/styles/main.sass)
+
+
+## multiline variables
+-
+  var x = [
+    {link: './img/svg/bacila.svg'},
+    {link: './img/svg/salut.svg'},
+    {link: './img/svg/heart.svg'}
+  ]
+
+## list loops
+-var x = [ {link: 'a'}, {link: 'b'}, {link: 'c'} ]
+each item in x
+  div= item.link

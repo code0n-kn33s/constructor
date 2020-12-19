@@ -1,0 +1,28 @@
+.init
+    margin-top: 100px
+.init-title
+    margin-top: 5px
+    margin-bottom: 5px
+    text-align: left
+.init
+    display: flex
+    gap: 10%
+    position: relative
+.init-list
+    margin: 16px 0 32px
+.init-list-item
+    padding-left: 15px
+    &::before
+        content: '^'
+        display: inline-block
+        color: $cg
+        margin-right: 10px
+        font-size: 16px
+        transform: rotate(180deg) skew(-8deg, -25deg) scale(1.3, .8)
+.init-info,
+.init-img
+    width: 50%
+.init-img
+    img
+        width: 100%
+        height: auto

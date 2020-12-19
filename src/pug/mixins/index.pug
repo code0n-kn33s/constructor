@@ -1,0 +1,9 @@
+//- +list('my-list', 1, 2, 3, 4)
+mixin list(id, ...items)
+  ul(id=id)
+    each item in items
+      li= item
+
+//- +link('btn', '/foo', 'foo')
+mixin link(href, name)
+  a(href=href)&attributes(attributes)= name
