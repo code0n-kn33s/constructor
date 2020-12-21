@@ -1,14 +1,17 @@
-import 'bootstrap';
+import 'materialize-css/dist/js/materialize.min';
+
 import "./styles/main.sass";
 
 import "./scripts/helpers.js";
 import "./scripts/select.js";
-import "./scripts/accordion.js";
 
-import "./scripts/parallax.js";
+// Materialize
+import "./scripts/accordion.js";
+import "./scripts/tabs.js";
+import "./scripts/modal.js";
+
 import "./scripts/common.js";
 
-import 'materialize-css/dist/js/materialize.min';
 
 /* --===
     В будущем зделать именной импорт

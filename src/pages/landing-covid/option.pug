@@ -1,64 +1,199 @@
+-
+    var tableTab1 = [
+        {
+            col_1_head: 'Якщо раптом',
+            col_2_head: 'Яка виплата?',
+            col_1_title: 'TAB_1: COVID-19',
+            col_1_text: 'TAB_1: максимальна виплата',
+            col_2_summ_1: '5 000 грн',
+            col_2_summ_2: '6 500 грн',
+        },
+        {
+            col_1_head: 'Якщо раптом',
+            col_2_head: 'Яка виплата?',
+            col_1_title: 'TAB_1: Критичні хвороби',
+            col_1_text: 'TAB_1: максимальна виплата',
+            col_2_summ_1: '4 000 грн',
+            col_2_summ_2: '7 000 грн',
+        },
+        {
+            col_1_head: 'Якщо раптом',
+            col_2_head: 'Яка виплата?',
+            col_1_title: 'TAB_1: Нещасний випадок',
+            col_1_text: 'TAB_1: максимальна виплата',
+            col_2_summ_1: '2 000 грн',
+            col_2_summ_2: '3 000 грн',
+        },
+        {
+            col_1_head: 'Якщо раптом',
+            col_2_head: 'Яка виплата?',
+            col_1_title: 'TAB_1: COVID-19',
+            col_1_text: 'TAB_1: максимальна виплата',
+            col_2_summ_1: '-',
+            col_2_summ_2: '4 000 грн',
+        },
+    ]
+
+    var tableTab2 = [
+        {
+            col_1_head: 'Якщо раптом',
+            col_2_head: 'Яка виплата?',
+            col_1_title: 'TAB_2: COVID-19',
+            col_1_text: 'TAB_2: максимальна виплата',
+            col_2_summ_1: '2 000 грн',
+            col_2_summ_2: '3 300 грн',
+        },
+        {
+            col_1_head: 'Якщо раптом',
+            col_2_head: 'Яка виплата?',
+            col_1_title: 'TAB_2: COVID-19',
+            col_1_text: 'TAB_2: максимальна виплата',
+            col_2_summ_1: '7 000 грн',
+            col_2_summ_2: '9 000 грн',
+        },
+        {
+            col_1_head: 'Якщо раптом',
+            col_2_head: 'Яка виплата?',
+            col_1_title: 'TAB_2: COVID-19',
+            col_1_text: 'TAB_2: максимальна виплата',
+            col_2_summ_1: '1 000 грн',
+            col_2_summ_2: '2 000 грн',
+        },
+        {
+            col_1_head: 'Якщо раптом',
+            col_2_head: 'Яка виплата?',
+            col_1_title: 'TAB_2: COVID-19',
+            col_1_text: 'TAB_2: максимальна виплата',
+            col_2_summ_1: '3 000 грн',
+            col_2_summ_2: '4 000 грн',
+        },
+    ]
+
 .options
     .container
         .options-title.tl Обирайте програму
+        .desktop-table
+            ul.tabs.options-tabs-items
+                li.tab.options-tabs-item
+                    a(class="active" href="#test1") Студентам та працівникам
+                li.tab.options-tabs-item
+                    a(href="#test2") Школярам та дошкільнятам
 
-        .options-tabs-items
-            .options-tabs-item.active Студентам та працівникам
-            .options-tabs-item Школярам та дошкільнятам
-
-        .options-tabs
-            table.options-tab-item
-                tr
-                    th
-                        .options-col-title.tls Якщо раптом
-                    th
-                        .options-col-title.tc.tls Яка виплата?
-                tr
-                    td
-                        .options-col-left-item
-                            .options-col-text.tx COVID-19
-                            .options-col-text.txs максимальна виплата при стаціонарному лікуванні
-                    td
-                        table.options-col-right-item
-                            tr
-                                td
-                                    .options-col-right.tx 5 000 грні
-                                td
-                                    .options-col-right.tx 5 000 грн
-                tr
-                    td
-                        .options-col-left-item
-                            .options-col-text.tx Критичні хвороби
-                            .options-col-text.txs максимальна виплата
-                    td
-                        table.options-col-right-item
-                            tr
-                                td
-                                    .options-col-right.tx нема
-                                td
-                                    .options-col-right.tx 25 000 грн
-                tr
-                    td
-                        .options-col-left-item
-                            .options-col-text.tx Нещасний випадок
-                            .options-col-text.txs максимальна виплата
-                    td
-                        table.options-col-right-item
-                            tr
-                                td
-                                    .options-col-right.tx 10 000 грні
-                                td
-                                    .options-col-right.tx 25 000 грн
-                tr
-                    td
-                        .options-col-left-final
-                            .options-item-final.tx
-                                b Вартість:
-                            .options-item-final-decis Умови оферти
-                    td
-                        table.options-col-right-final
-                            tr
-                                td
-                                    .options-item-right-final 300 грн
-                                td
-                                    .options-item-right-final 650 грн
+            .options-tabs
+                table.options-tab-item#test1
+                    tr
+                        th
+                            .options-col-title.tls.ta-c Якщо раптом
+                        th
+                            .options-col-title.ta-c.tls Яка виплата?
+                    each tab1 in tableTab1
+                        tr
+                            td
+                                .options-col-left-item
+                                    .options-col-text.tx= tab1.col_1_title
+                                    .options-col-text.txs= tab1.col_1_text
+                            td
+                                table.options-col-right-item
+                                    tr
+                                        td
+                                            .options-col-right.tx= tab1.col_2_summ_1
+                                        td
+                                            .options-col-right.tx= tab1.col_2_summ_2
+                    tr
+                        td
+                            .options-col-left-final
+                                .options-item-final.tx
+                                    b Вартість:
+                                .options-item-final-decis Умови оферти
+                        td
+                            table.options-col-right-final
+                                tr
+                                    td
+                                        .options-item-right-final 300 грн
+                                    td
+                                        .options-item-right-final 650 грн
+                table.options-tab-item#test2
+                    tr
+                        th
+                            .options-col-title.tls.ta-c Якщо раптом
+                        th
+                            .options-col-title.tc.tls.ta-c Яка виплата?
+                    each tab2 in tableTab2
+                        tr
+                            td
+                                .options-col-left-item
+                                    .options-col-text.tx= tab2.col_1_title
+                                    .options-col-text.txs= tab2.col_1_text
+                            td
+                                table.options-col-right-item
+                                    tr
+                                        td
+                                            .options-col-right.tx= tab2.col_2_summ_1
+                                        td
+                                            .options-col-right.tx= tab2.col_2_summ_2
+                    tr
+                        td
+                            .options-col-left-final
+                                .options-item-final.tx
+                                    b Вартість:
+                                .options-item-final-decis Умови оферти
+                        td
+                            table.options-col-right-final
+                                tr
+                                    td
+                                        .options-item-right-final 300 грн
+                                    td
+                                        .options-item-right-final 650 грн
+        .laptop-table
+            ul.collapsible.laptop-table-tab
+                li.laptop-table-item.ui-collapse-item.collapsible-table
+                        .collapsible-header.laptop-table-head
+                            .laptop-table-title.tx.cg Студентам та працівникам освіти
+                            .ui-collapse-icon
+                        .collapsible-body.laptop-table-body.txs
+                            each tab1, key in tableTab1
+                                .laptop-body-item
+                                    div.tls= tab1.col_1_head
+                                    div.tx= tab1.col_1_title
+                                    div.txs= tab1.col_1_text
+                                    br
+                                    div.tls= tab1.col_2_head
+                                    table.options-col-right-item
+                                        tr
+                                            td
+                                                .options-col-right.tx= tab1.col_2_summ_1
+                                            td
+                                                .options-col-right.tx= tab1.col_2_summ_2
+                            div
+                                .tls Вартість програми:
+                                table.options-col-right-final
+                                    tr
+                                        td
+                                            .options-item-right-final 300 грн
+                                        td
+                                            .options-item-right-final 650 грн
+                li.laptop-table-item.ui-collapse-item.collapsible-table
+                        .collapsible-header.laptop-table-head
+                            .laptop-table-title.tx.cg Школярам та дошкільнятам
+                            .ui-collapse-icon
+                        .collapsible-body.laptop-table-body.txs
+                            each tab2, key in tableTab2
+                                .laptop-body-item
+                                    div.tls= tab2.col_1_head
+                                    div.tx= tab2.col_1_title
+                                    div.txs= tab2.col_1_text
+                                    div.tls= tab2.col_2_head
+                                    table.options-col-right-item
+                                        tr
+                                            td
+                                                .options-col-right.tx= tab2.col_2_summ_1
+                                            td
+                                                .options-col-right.tx= tab2.col_2_summ_2
+                            div
+                                .tls Вартість програми:
+                                table.options-col-right-final
+                                    tr
+                                        td
+                                            .options-item-right-final 300 грн
+                                        td
+                                            .options-item-right-final 650 грн

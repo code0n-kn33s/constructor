@@ -1,15 +1,21 @@
 .steam
-    margin-top: 237px
 .steam-list
     display: flex
     justify-content: space-between
+    @include tablet
+        flex-direction: column
 .steam-item
-    width: 25%
+    width: 33%
+    @include tablet
+        width: 80%
+        margin-bottom: 32px
 .steam-item-img
+    height: 48px
+    img
+        height: 100%
+        width: auto
 .steam-item-title
-
+    margin: 8px 0
 .steam-title
-    margin-bottom: 80px
     text-align: center
-
 .steam-item-text

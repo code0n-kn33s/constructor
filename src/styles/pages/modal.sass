@@ -1,0 +1,81 @@
+
+.modal
+    background: #FFFFFF
+    box-shadow: 3px 5px 11px rgba(0, 0, 0, 0.05)
+    border-radius: 10px
+    max-height: fit-content
+    .modal-content
+        padding: 0
+    @include mobile
+        width: 90%
+.modal-content
+    position: relative
+.form
+    padding: 60px
+    @include tablet
+        padding: 30px
+    @include mobile
+        padding: 16px
+    .btn
+        margin-top: 40px
+        @include mobile
+            width: 100%
+.form-item
+.form-title
+    font-weight: bold
+    font-size: 15px
+    line-height: 18px
+    color: $ct
+.form-input
+    margin-top: 8px !important
+    padding: 12px !important
+    background: #FFFFFF !important
+    border: 1px solid #D9D9D9 !important
+    box-sizing: border-box !important
+    box-shadow: inset 0px 2px 3px 1px rgba(209, 222, 249, 0.5) !important
+    border-radius: 5px !important
+.form-forked-items
+    display: flex
+    justify-content: space-between
+    gap: 20px
+    margin: 24px 0
+    .form-item
+        width: 45%
+    @include tablet
+        flex-direction: column
+        .form-item
+            width: auto
+.form-description
+    font-weight: 500
+    font-size: 12px
+    color: $ct
+
+// modal close btn
+.modal-btn-close
+    position: absolute
+    right: 0
+    top: 0
+    padding: 30px
+    cursor: pointer
+    transition: .3s ease-in-out
+    @include tablet
+        padding: 18px
+    &:before,
+    &:after
+        background: $cg
+        content: ''
+        height: 2px
+        left: 0
+        position: absolute
+        width: 21px
+        transition: transform 500ms ease
+    &:after
+        transform-origin: center
+    &:after
+        transform: rotate(45deg)
+    &:before
+        transform: rotate(130deg)
+    &:hover
+        &:before,
+        &:after
+            background: $cgh

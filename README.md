@@ -25,3 +25,6 @@ clone and run:
 -var x = [ {link: 'a'}, {link: 'b'}, {link: 'c'} ]
 each item in x
   div= item.link
+
+## standart path to img
+img(src="./img/svg/map.svg" alt="")

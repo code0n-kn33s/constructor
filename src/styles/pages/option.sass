@@ -1,8 +1,13 @@
-.option
-.option
-    .container
-
 .options
+    .desktop-table
+        @include tablet
+            display: none
+    .laptop-table
+        display: none
+        @include tablet
+            display: block
+    .tabs .tab a:hover, .tabs .tab a.active
+        background-color: white !important
 .options-title
     text-align: center
 .options-tabs-items
@@ -10,15 +15,15 @@
     margin: auto
     height: 56px
     width: 80%
-    padding: 4px
-    background: #fff
+    padding: 4px !important
+    background: #fff !important
     border-radius: 8px
-    background: rgba(231, 45, 43, 0.05)
+    background: rgba(231, 45, 43, 0.05) !important
     margin-bottom: 32px
 .options-tabs-item.active
-    background: white
+    background: white !important
     padding: 0 16px
-    color: #E72D2B
+    color: #E72D2B !important
 .options-tabs-item
     line-height: 48px
     height: 48px
@@ -28,7 +33,7 @@
     padding: 0 20px
     font-size: 17px
     font-weight: 600
-    color: rgba(231, 45, 43, 0.5)
+    color: rgba(231, 45, 43, 0.5) !important
     cursor: pointer
 
 .options-tabs
@@ -36,7 +41,11 @@
 .options-col-title
     margin-bottom: 20px
 .options-col-left-item
-    padding-right: 30%
+    padding-right: 100px
+    @include laptop
+        padding-right: 50px
+    @include tablet
+        padding-right: 30px
 .options-col-text
 .options-col-right-item
 
@@ -46,11 +55,12 @@
     width: 250px
     line-height: 80px
     text-align: center
-    background: #F7F7F7
+    background: #F7F7F7 !important
     border-radius: 8px
     margin: 10px
+    @include laptop
+        width: 150px
 .options-col-left-final
-
 .options-item-final
 .options-col-right-final
 .options-item-right-final
@@ -60,3 +70,17 @@
     color: $cg
 .options-item-final-decis
     color: gray
+.collapsible-table
+    background: #FFFFFF
+    box-shadow: 0px 6px 20px -6px rgba(231, 45, 43, 0.25)
+    border-radius: 8px
+.laptop-table-body
+    .tx
+        margin-bottom: 8px
+    .tls
+        margin-bottom: 16px
+    .options-col-right
+        font-size: 15px
+        width: auto
+.laptop-body-item
+    margin-bottom: 32px

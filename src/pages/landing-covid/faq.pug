@@ -39,7 +39,7 @@
             ul.collapsible.ui-collapse
                 each info, key in faqInfo
                     li.ui-collapse-item
-                        .collapsible-header.ui-collapse-head(id=`collapseHead${key}`)
-                            .ui-collapse-title.tx(aria-controls=key)= info.question
-                            .ui-collapse-icon(id=`collapseIcon${key}`)
-                        .collapsible-body.ui-collapse-body.txs(id=`collapseBody${key}`)= info.answer
+                        .collapsible-header.ui-collapse-head
+                            .ui-collapse-title.tx= info.question
+                            .ui-collapse-icon
+                        .collapsible-body.ui-collapse-body.txs= info.answer

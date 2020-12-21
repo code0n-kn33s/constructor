@@ -13,3 +13,13 @@
 .btn, .btn-large, .btn-small {
     height: auto;
 }
+
+tr {
+    border-bottom: none;
+    td {
+        padding: 0;
+    }
+}
+.collapsible-header {
+    position: relative;
+}

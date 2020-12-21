@@ -1,6 +1,6 @@
 # c -> color
 $cg -- color global
-$cgh -- color global hover
+$cg-h -- color global hover
 $cs -- color second
 $ct -- color text
 
@@ -12,10 +12,14 @@ $ct -- color text
 [.btn] -- button
 
 # [.fw] -- font-weight
-.fwb -- font-weight: bold
-.fwm -- font-weight: medium
-.fwr -- font-weight: regular
-.fwl -- font-weight: light
+.fw-b -- font-weight: bold
+.fw-m -- font-weight: medium
+.fw-r -- font-weight: regular
+.fw-l -- font-weight: light
 
-# class selectors
-.tac -- text-align: center
+# ta -> text-align
+.ta-c -- text-align: center
+.ta-l -- text-align: center
+.ta-r -- text-align: center
+
+.td-u -- text-decoration: underline

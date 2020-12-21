@@ -1,5 +1,4 @@
 (function(){
-console.log('selectWorks');
 var x, i, j, selElmnt, a, b, c;
 
 x = document.getElementsByClassName("custom-select");

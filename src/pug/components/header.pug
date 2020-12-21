@@ -1,14 +1,43 @@
-//- imgs path img(src="./img/svg/map.svg" alt="")
-.header
-    .header-menu
-        .header-menu-item
-            a(href="#") Main
-        .header-menu-item
-            a(href="#") News
-        .header-menu-item
-            a(href="#") Contacts
-    h1 here img
-        //- img(src="./img/main_bg.jpg", alt="")
-    .header-toolbar
-      img(src="./img/svg/bill.svg" alt="")
-      img(src="./img/svg/files.svg" alt="")
+nav(class="nav-extended")
+    div(class="nav-wrapper")
+        a(href="#" class="brand-logo text-teal" style="height: 35px; margin-left: 25px;")
+            img(src="./img/svg/logo.svg", alt="")
+
+        a(href="#" data-target="mobile-demo" class="sidenav-trigger")
+            span(class="material-icons")
+                img(style="width: 35px;" src="./img/svg/Menu.svg", alt="")
+
+            ul(id="nav-mobile" class="right hide-on-med-and-down")
+                li
+                    a(href="#") Приєднуйтесь до нас:
+                li
+                    a(href="youtube.com")
+                        img(src="./img/svg/FB.svg", alt="")
+                li
+                    a(href="badges.html")
+                        img(src="./img/svg/Insta.svg", alt="")
+                li
+                    a(href="collapsible.html")
+                        img(src="./img/svg/YouTube.svg", alt="")
+
+    div(class="nav-content")
+        ul(class="tabs tabs-transparent hide-on-med-and-down")
+            li.tab
+                a.active(href="menuItem1") ПРИВАТНИМ ОСОБАМ
+            li.tab
+                a(href="menuItem2") ЮРИДИЧНИМ ОСОБАМ
+            li.tab
+                a(href="menuItem3")  СТРАХОВИЙ ВИПАДОК
+            li.tab
+                a(href="menuItem4") ПРО КОМПАНІЮ
+
+    ul(class="sidenav" id="mobile-demo" )
+        li
+            a.active(href="menuItem1") ПРИВАТНИМ ОСОБАМ
+        li
+            a(href="menuItem2") ЮРИДИЧНИМ ОСОБАМ
+        li
+            a(href="menuItem3")  СТРАХОВИЙ ВИПАДОК
+        li
+            a(href="menuItem4") ПРО КОМПАНІЮ
+
